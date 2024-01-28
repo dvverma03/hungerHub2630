@@ -4,6 +4,7 @@ import useOnline from "../utils/useOnline";
 import userContext from "../utils/userContext";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'; // Correct import statement
 import { useSelector } from "react-redux";
+import Logo from "../assets/The1.png"
 
 const Header = () => {
     const [islogin, setIslogin] = useState(false);
@@ -14,7 +15,7 @@ const Header = () => {
     return (
         <>
             <div className="flex justify-between bg-pink-500 sticky top-0 z-10">
-                <img className="w-48" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqqIWi6VsYYo5-BZohJN5otEHtwUwAPOuvrg&usqp=CAU"></img>
+                <img className="w-[235px]" src={Logo}></img>
                 <div className="list-none flex py-6 ">
                     <li><Link className="p-4 m-2 text-xl w-36 box-border hover:font-bold" to="/" onClick={() => setIslogin(false)}>Restaurants</Link></li>
                     <li><Link className="p-4 m-2 text-xl w-36 hover:font-bold" to="/about">About</Link></li>

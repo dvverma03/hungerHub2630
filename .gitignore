@@ -2,3 +2,4 @@
 dist/
 .cache/
 .parcel-cache/
+.env
