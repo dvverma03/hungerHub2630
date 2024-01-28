@@ -1,7 +1,7 @@
 # HungerHub
 <p>This is a food Ordering app</p>
 <p>About</p>
-![Screenshot 2024-01-24 013831](https://github.com/dvverma03/hungerHub2630/assets/116081426/de667e17-9ade-464e-9876-0c4407bbfe65)
+<img src="https://github.com/dvverma03/hungerHub2630/assets/116081426/de667e17-9ade-464e-9876-0c4407bbfe65" />
 <p>Cart</p>
 ![Screenshot 2024-01-24 013814](https://github.com/dvverma03/hungerHub2630/assets/116081426/d640b028-1cce-43c4-acae-df048c53fbd6)
 <p>Menu Category</p>
