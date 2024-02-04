@@ -23,20 +23,28 @@ const Body = () => {
   }, []);
 
   async function getRestaurantData() {
-    try {
       const response = await fetch(
-        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+        // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+        // lat=26.4968921&lng=80.3004177
       );
       const data = await response.json();
-      const restaurants =
-        data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-  ?.restaurants || [];
-      setAllRestaurants(restaurants);
-      setFilteredRestaurants(restaurants);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+      setAllRestaurants(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setFilteredRestaurants(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
+
+  // async function getRestaurantData() {
+  //   const data = await fetch(
+  //     "https://www.swiggy.com/dapi/restaurants/list/v5?lat=26.4968921&lng=80.3004177&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+  //   );
+  //   const json = await data.json();
+  //   setAllRestaurants(
+  //     json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  //   setFilteredRestaurants(
+  //     json.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  //   );
+  // }
 
   const RestaurentWithPromoted=WithPromotedLabel(RestaurantCard);
 
