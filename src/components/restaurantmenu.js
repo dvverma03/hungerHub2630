@@ -8,7 +8,6 @@ import RestaurentItemCategory from "./restaurentItemCategory";
 const RestaurantMenu = () => {
   const param = useParams();
   const { id } = param;
-  // const [showIndex,setShowIndex]=useState(null);
 
   const restaurant = useRestaurant(id);
   const Menu = useRestaurantItem(id);
@@ -23,9 +22,9 @@ const RestaurantMenu = () => {
 
   return (
     <>
-      <div className="flex justify-around">
+      <div className=" ml-6 md:flex md:justify-around">
         <img
-          className="w-120 relative right-16 py-6"
+          className="w-[100%] pl-10 ml-4 md:w-[500px]  relative right-16 py-6"
           src={IMG_CDN_URL + restaurant?.cloudinaryImageId}
           alt="Restaurant"
         />
@@ -50,13 +49,6 @@ const RestaurantMenu = () => {
               </div>
             ))}
           </ul>
-          // <ul className="menus_all">
-          //   {mainMenu.map((e, index) => (
-          //     <div key={e?.card?.card?.itemCards?.card?.name} className="flex">
-          //       {<RestaurentItemCategory  rest={e?.card?.card} showItems={index==showIndex?true:false}  setShowIndex={()=>setShowIndex(index)}/>}
-          //     </div>
-          //   ))}
-          // </ul>
         ) : (
           <p>Loading menu...</p>
         )}

@@ -7,7 +7,7 @@ const RestaurentItemCategory = ({ rest}) => {
   }
   return (
     <div className="flex-1">
-      <div className="w-6/12  bg-slate-50 mx-auto my-2 shadow-lg p-6">
+      <div className="w-5/6 md:w-6/12  bg-slate-50 mx-auto my-2 shadow-lg p-6">
         <div className="flex justify-between cursor-pointer" onClick={handleClick}>
           <span className="font-bold text-lg">
             {rest.title}({rest?.itemCards?.length})

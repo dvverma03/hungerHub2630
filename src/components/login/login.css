@@ -76,3 +76,10 @@
 .Link{
     text-decoration: none;
 }
+
+
+@media (max-width:480px){
+    .loginWrapper{
+        flex-direction: column;
+    }
+}

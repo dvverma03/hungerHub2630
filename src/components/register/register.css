@@ -84,3 +84,21 @@
 .loginLink{
     text-decoration: none;
 }
+
+@media (max-width:500px){
+    .loginWrapper{
+        flex-direction: column;
+        width: 90%;
+        margin-top: 0px;
+    }
+    .login{
+        height: 900px;
+        margin-top: -80px;
+    }
+    .loginLeft{
+        margin: 0px;
+    }
+    .loginRight{
+        margin: 0;
+    }
+}

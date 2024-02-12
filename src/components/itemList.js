@@ -13,7 +13,7 @@ const ItemList = ({ data }) => {
     <div className="m-2">
       {data.map((item) => (
         <div
-          className="p-2 my-4 border-b-2 border-black text-left flex"
+          className="p-2 my-4 border-b-2 border-black text-left md:flex"
           key={item?.card?.info?.id}
         >
           <div className="w-9/12">
@@ -29,14 +29,14 @@ const ItemList = ({ data }) => {
             </div>
             <p>{item?.card?.info?.description}</p>
           </div>
-          <div className="w-3/12 ">
+          <div className="md:w-3/12 ">
             <div className="absolute">
               <button className="bg-gray-500 text-white px-2 py-1 rounded font-bold " onClick={()=>handaleCart(item)} >
                 ADD +
               </button>
             </div>
             <img
-              className="w-full m-1"
+              className=" w-full m-1"
               src={IMG_CDN_URL + item?.card?.info?.imageId}
               alt=""
               srcset=""
